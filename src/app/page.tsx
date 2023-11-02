@@ -1,7 +1,10 @@
-import Image from 'next/image'
+import { SampleComp } from "@/comps";
 
-export default function Home() {
+export default function Home() { 
   return (
-    <h1>Hey Sahil</h1>
+    <>
+      <h1>Root Page {process.env.SAHIL} </h1>
+      <SampleComp />
+    </>
   )
 }
