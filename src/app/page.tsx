@@ -1,10 +1,15 @@
-import { SampleComp } from "@/comps";
+import Data from "@/comps/Data";
+import { Suspense } from "react";
 
-export default function Home() { 
+export default function Home() {
   return (
     <>
-      <h1>Root Page {process.env.SAHIL} </h1>
-      <SampleComp />
+      <div className="flex flex-col gap-6">
+        <h1>Home page</h1>
+        <Suspense fallback="loading">
+          <Data />
+        </Suspense>
+      </div>
     </>
-  )
+  );
 }
